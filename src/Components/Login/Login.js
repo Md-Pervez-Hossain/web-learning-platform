@@ -112,7 +112,7 @@ const Login = () => {
               </Link>
             </div>
           </div>
-          <button className="block w-full p-3 text-center   bg-white shadow-lg  rounded-md">
+          <button className="block w-full p-3 text-center   bg-white hover:text-white hover:bg-primary :ease-in duration-200  font-bold shadow-lg  rounded-md">
             Sign in
           </button>
         </form>
@@ -127,7 +127,7 @@ const Login = () => {
           <button
             onClick={logInWithGoogle}
             aria-label="Log in with Google"
-            className="p-3 rounded-sm"
+            className="p-3 rounded-sm hover:text-primary ease-in duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ const Login = () => {
           <button
             onClick={logInWithGitHub}
             aria-label="Log in with GitHub"
-            className="p-3 rounded-sm"
+            className="p-3 rounded-sm hover:text-primary ease-in duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

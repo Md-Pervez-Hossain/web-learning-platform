@@ -4,10 +4,17 @@ import { FaFacebook, FaGoogle, FaInstagram, FaTwitter } from "react-icons/fa";
 const Teachers = () => {
   return (
     <div className="md:w-9/12 mx-auto p-4  pb-10">
-      <h2 className="text-7xl font-bold py-16 text-center text-primary">
-        Our Teacher
-      </h2>
-      <p></p>
+      <div className=" md:py-16 text-center ">
+        <h2 className="md:text-7xl text-4xl font-bold text-primary pb-5  md:pb-10">
+          Our Teacher
+        </h2>
+        <p>
+          Teaching is certainly the most commonly known career path for students
+          earning a degree in education, and it's a great option if you like
+          working with children or adults in a classroom setting. Teachers
+          prepare and educate their students for the world.
+        </p>
+      </div>
       <div className="grid md:grid-cols-3 gap-10">
         <div className="bg-gray-100 shadow-2xl rounded-md ">
           <img

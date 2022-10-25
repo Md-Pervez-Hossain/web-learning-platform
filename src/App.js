@@ -4,6 +4,7 @@ import Blog from "./Components/Blog/Blog";
 import CheckOut from "./Components/CheckOut/CheckOut";
 import Courses from "./Components/Courses/Courses";
 import DetailsCourse from "./Components/Courses/DetailsCourse";
+import Faq from "./Components/Faq/Faq";
 
 import Home from "./Components/Home/Home";
 import Main from "./Components/Layout/Main";
@@ -43,6 +44,10 @@ function App() {
         {
           path: "/login",
           element: <Login></Login>,
+        },
+        {
+          path: "/faq",
+          element: <Faq></Faq>,
         },
         {
           path: "/register",

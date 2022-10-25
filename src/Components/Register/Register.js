@@ -46,7 +46,7 @@ const Register = () => {
       });
   };
   return (
-    <div className="bg-gray-100 h-screen py-16 p-4">
+    <div className="bg-gray-100 py-16 p-4">
       <div className=" md:w-2/5 mx-auto p-16 space-y-3 rounded-xl shadow-2xl">
         <h1 className="text-2xl font-bold text-center">Please Register</h1>
         <form
@@ -63,7 +63,7 @@ const Register = () => {
               id="username"
               placeholder="username"
               required
-              className="w-full border-red-500 px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -102,7 +102,7 @@ const Register = () => {
               className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
             />
           </div>
-          <button className="block w-full p-3 text-center   bg-white shadow-lg  rounded-md">
+          <button className="block w-full p-3 text-center bg-white hover:bg-primary :ease-in duration-200 hover:text-white    shadow-lg  rounded-md">
             Register
           </button>
         </form>

@@ -18,29 +18,63 @@ const Header = () => {
   return (
     <div className=" bg-primary text-white py-4 shadow-xl  ">
       <div className=" w-9/12 mx-auto flex justify-between text-xl font-semibold ">
-        <Link to="/">Web Tech</Link>
-        <div className="flex gap-5 menu menu-vertical lg:menu-horizontal">
-          <Link to="/home">Home</Link>
+        <Link
+          to="/"
+          className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+        >
+          Web Tech
+        </Link>
+        <div className="flex gap-10 menu menu-vertical lg:menu-horizontal">
+          <Link
+            to="/courses"
+            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+          >
+            Courses
+          </Link>
+          <Link
+            to="/blog"
+            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+          >
+            Blog
+          </Link>
+          <Link
+            to="/faq"
+            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+          >
+            Faq
+          </Link>
 
-          <Link to="/blog">Blog</Link>
-          <Link to="/courses">Courses</Link>
           {user?.uid ? (
             <>
-              <Link to="/home" onClick={handleLogout}>
+              <Link
+                to="/home"
+                onClick={handleLogout}
+                className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+              >
                 Logout
               </Link>
 
               <img
                 src={user.photoURL}
                 alt=""
-                width="30px"
-                className="rounded"
+                width="50px"
+                className=" rounded hover:bg-white hover:text-primary hover:ease-in duration-200 hover:rounded-lg p-2"
               />
             </>
           ) : (
             <>
-              <Link to="/login">Login</Link>
-              <Link to="register">Register</Link>
+              <Link
+                to="/login"
+                className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+              >
+                Login
+              </Link>
+              <Link
+                to="register"
+                className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+              >
+                Register
+              </Link>
             </>
           )}
         </div>
