@@ -46,7 +46,7 @@ const Register = () => {
       });
   };
   return (
-    <div className="bg-gray-100 h-screen pt-16 p-4">
+    <div className="bg-gray-100 h-screen py-16 p-4">
       <div className=" md:w-2/5 mx-auto p-16 space-y-3 rounded-xl shadow-2xl">
         <h1 className="text-2xl font-bold text-center">Please Register</h1>
         <form
