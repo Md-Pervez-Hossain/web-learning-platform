@@ -28,7 +28,6 @@ const Header = () => {
           <Link to="/courses">Courses</Link>
           {user?.uid ? (
             <>
-              <Link to="/courses">Course</Link>
               <Link to="/home" onClick={handleLogout}>
                 Logout
               </Link>
