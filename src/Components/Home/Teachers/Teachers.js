@@ -4,7 +4,10 @@ import { FaFacebook, FaGoogle, FaInstagram, FaTwitter } from "react-icons/fa";
 const Teachers = () => {
   return (
     <div className="md:w-9/12 mx-auto p-4  pb-10">
-      <h2 className="text-7xl font-bold py-16 text-center">Our Teacher</h2>
+      <h2 className="text-7xl font-bold py-16 text-center text-primary">
+        Our Teacher
+      </h2>
+      <p></p>
       <div className="grid md:grid-cols-3 gap-10">
         <div className="bg-gray-100 shadow-2xl rounded-md ">
           <img
@@ -16,10 +19,10 @@ const Teachers = () => {
             <p> Design and User Experience</p>
             <p>Design Amalgamation</p>
             <div className="flex gap-3 my-3 cursor-pointer">
-              <FaFacebook></FaFacebook>
-              <FaGoogle></FaGoogle>
-              <FaTwitter></FaTwitter>
-              <FaInstagram></FaInstagram>
+              <FaFacebook className=" hover:text-primary   shadow-xl"></FaFacebook>
+              <FaGoogle className="hover:text-primary transition-shadow"></FaGoogle>
+              <FaTwitter className="hover:text-primary transition-shadow"></FaTwitter>
+              <FaInstagram className="hover:text-primary transition-shadow"></FaInstagram>
             </div>
           </div>
         </div>
@@ -33,10 +36,10 @@ const Teachers = () => {
             <p> Software Engenure</p>
             <p>Chief of Technology, Apple Inc.</p>
             <div className="flex gap-3 my-3 cursor-pointer">
-              <FaFacebook></FaFacebook>
-              <FaGoogle></FaGoogle>
-              <FaTwitter></FaTwitter>
-              <FaInstagram></FaInstagram>
+              <FaFacebook className="hover:text-primary transition-shadow"></FaFacebook>
+              <FaGoogle className="hover:text-primary transition-shadow"></FaGoogle>
+              <FaTwitter className="hover:text-primary transition-shadow"></FaTwitter>
+              <FaInstagram className="hover:text-primary transition-shadow"></FaInstagram>
             </div>
           </div>
         </div>
@@ -50,10 +53,10 @@ const Teachers = () => {
             <p> Front end Developer</p>
             <p>Evangelist, Grammarly Inc.</p>
             <div className="flex gap-3 my-3 cursor-pointer">
-              <FaFacebook></FaFacebook>
-              <FaGoogle></FaGoogle>
-              <FaTwitter></FaTwitter>
-              <FaInstagram></FaInstagram>
+              <FaFacebook className="hover:text-primary transition-shadow"></FaFacebook>
+              <FaGoogle className="hover:text-primary transition-shadow"></FaGoogle>
+              <FaTwitter className="hover:text-primary transition-shadow"></FaTwitter>
+              <FaInstagram className="hover:text-primary transition-shadow"></FaInstagram>
             </div>
           </div>
         </div>

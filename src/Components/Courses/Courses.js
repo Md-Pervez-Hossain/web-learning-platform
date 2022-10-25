@@ -9,14 +9,14 @@ const Courses = () => {
   return (
     <div className="md:w-9/12 mx-auto grid md:grid-cols-3 gap-5 my-16 p-4 ">
       <div className="md:col-span-1">
-        <h2 className="text-3xl font-bold bg-gray-100 p-3 shadow-2xl  mb-3  text-center">
+        <h2 className="text-3xl font-bold bg-primary text-white p-3 shadow-2xl  mb-3  ">
           Avaiable Courses
         </h2>
         {courses.map((item) => {
           return (
             <div key={item.id}>
               <Link to={`/courses/${item.id}`}>
-                <h2 className="text-2xl font-bold text-center py-5 cursor-pointer bg-gray-100 shadow-2xl">
+                <h2 className="text-2xl font-bold hover:text-primary ease-in duration-200 py-5 cursor-pointer">
                   {item.name}
                 </h2>
               </Link>

@@ -16,11 +16,9 @@ const Header = () => {
       });
   };
   return (
-    <div className=" bg-gray-100 py-4 shadow-xl  ">
+    <div className=" bg-primary text-white py-4 shadow-xl  ">
       <div className=" w-9/12 mx-auto flex justify-between text-xl font-semibold ">
-        <div>
-          <h2>Web Tech</h2>
-        </div>
+        <Link to="/">Web Tech</Link>
         <div className="flex gap-5 menu menu-vertical lg:menu-horizontal">
           <Link to="/home">Home</Link>
 

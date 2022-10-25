@@ -14,21 +14,24 @@ const Home = () => {
           <div>
             <h1 className="text-7xl font-regular">
               FUTURE OF <br /> Online
-              <span className="text-7xl font-bold text-primary">
-                {" "}
+              <span className="text-7xl font-bold text-primary ml-2">
                 Education.
               </span>
             </h1>
             <p className="py-6">
               The most advanced education framework for Web. You get a website
-              with service workers which <br /> works both online and offline.
-              The best part it comes with inbuilt installable app.
+              with service workers which works both online and offline. The best
+              part it comes with inbuilt installable app.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-primary hover:bg-transparent hover:text-primary">
+              Get Started
+            </button>
           </div>
         </div>
       </div>
-      <Teachers></Teachers>
+      <div className="pb-10">
+        <Teachers></Teachers>
+      </div>
     </div>
   );
 };

@@ -21,12 +21,12 @@ const DetailsCourse = () => {
             Phone : <span className="font-light">$ {phone}</span>
           </p>
           <Link to="/courses">
-            <button className="bg-white shadow-xl px-3 py-2 my-2 font-bold">
+            <button className=" bg-primary hover:bg-transparent hover:text-primary hover:ease-in duration-200 text-white  shadow-xl px-3 py-2 my-2 font-bold">
               Back to Course
             </button>
           </Link>
           <Link to={`/checkout/${id}`}>
-            <button className="bg-white shadow-xl px-3 py-2 my-2 font-bold md:ml-2">
+            <button className=" bg-primary hover:bg-transparent hover:text-primary hover:ease-in duration-200 text-white  shadow-xl px-3 py-2 my-2 font-bold md:ml-3">
               Get premium access
             </button>
           </Link>
