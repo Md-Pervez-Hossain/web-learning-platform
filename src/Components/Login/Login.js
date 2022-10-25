@@ -1,30 +1,92 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
+  const [userEmail, setUserEmail] = useState("");
+  const { userSignIn, LogInWithGoogle, logInWithGithub, resetemail } =
+    useContext(AuthContext);
+  const navigate = useNavigate();
+  const handleSignIn = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    userSignIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        form.reset();
+        navigate("/home");
+        toast.success("Suer SuccesFully Log in", { autoClose: 500 });
+        console.log(user);
+      })
+      .catch((error) => {
+        toast.warning(error.message);
+      });
+    console.log(email, password);
+  };
+
+  const logInWithGoogle = () => {
+    LogInWithGoogle()
+      .then(() => {
+        toast.success("SuccessFully Log In With Google", { autoClose: 500 });
+      })
+      .catch((error) => {
+        toast.warning(error.message, { autoClose: 500 });
+      });
+  };
+  const logInWithGitHub = () => {
+    logInWithGithub()
+      .then(() => {
+        toast.success("SuccessFully Log in With GitHub", { autoClose: 500 });
+      })
+      .catch((error) => {
+        toast.warning(error.message, { autoClose: 500 });
+      });
+  };
+  const handleEmail = (event) => {
+    const email = event.target.value;
+    setUserEmail(email);
+  };
+
+  const handlePasswordReset = () => {
+    resetemail(userEmail)
+      .then(() => {
+        toast.success("check your Email For Recovery Password", {
+          autoClose: 500,
+        });
+      })
+      .catch((error) => {
+        toast.warn(error.message, { autoClose: 500 });
+      });
+  };
+
   return (
     <div className="bg-gray-100 h-screen pt-16 p-4">
       <div className=" md:w-2/5 mx-auto p-16 space-y-3 rounded-xl shadow-2xl">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form
-          novalidate=""
-          action=""
+          onSubmit={handleSignIn}
           className="space-y-6 ng-untouched ng-pristine ng-valid"
         >
           <div className="space-y-1 text-sm">
-            <label for="username" className="block dark:text-gray-400">
+            <label htmlFor="username" className="block dark:text-gray-400">
               Email
             </label>
             <input
+              onBlur={handleEmail}
               type="text"
-              name="username"
+              name="email"
               id="username"
               placeholder="Email"
               className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label for="password" className="block dark:text-gray-400">
+            <label htmlFor="password" className="block dark:text-gray-400">
               Password
             </label>
             <input
@@ -35,7 +97,11 @@ const Login = () => {
               className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
             />
             <div className="flex justify-end text-xs dark:text-gray-400">
-              <Link rel="noopener noreferrer" href="#">
+              <Link
+                onClick={handlePasswordReset}
+                rel="noopener noreferrer"
+                href="#"
+              >
                 Forgot Password?
               </Link>
             </div>
@@ -52,7 +118,11 @@ const Login = () => {
           <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
         </div>
         <div className="flex justify-center space-x-4">
-          <button aria-label="Log in with Google" className="p-3 rounded-sm">
+          <button
+            onClick={logInWithGoogle}
+            aria-label="Log in with Google"
+            className="p-3 rounded-sm"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
@@ -62,7 +132,11 @@ const Login = () => {
             </svg>
           </button>
 
-          <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
+          <button
+            onClick={logInWithGitHub}
+            aria-label="Log in with GitHub"
+            className="p-3 rounded-sm"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
@@ -76,7 +150,7 @@ const Login = () => {
           Don't have an account?
           <Link
             rel="noopener noreferrer"
-            href="#"
+            to="/register"
             className="underline dark:text-gray-100"
           >
             Sign up
