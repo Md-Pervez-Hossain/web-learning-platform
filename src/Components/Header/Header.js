@@ -16,7 +16,7 @@ const Header = () => {
       });
   };
   return (
-    <div className=" py-4 shadow-xl">
+    <div className=" bg-gray-100 py-4 shadow-xl sticky top-0 ">
       <div className=" w-9/12 mx-auto flex justify-between text-xl font-semibold ">
         <div>
           <h2>Web Tech</h2>
