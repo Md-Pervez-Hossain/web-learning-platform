@@ -26,7 +26,7 @@ const DetailsCourse = () => {
             </button>
           </Link>
           <Link to={`/checkout/${id}`}>
-            <button className="bg-white shadow-xl px-3 py-2 my-2 font-bold ml-2">
+            <button className="bg-white shadow-xl px-3 py-2 my-2 font-bold md:ml-2">
               Get premium access
             </button>
           </Link>

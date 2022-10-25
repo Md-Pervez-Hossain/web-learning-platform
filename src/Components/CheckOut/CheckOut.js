@@ -6,7 +6,7 @@ const CheckOut = () => {
   const course = useLoaderData();
   const { id, picture, name, description, phone, email, price } = course;
   return (
-    <div className=" bg-gray-100  py-16">
+    <div className=" bg-gray-100  py-16 px-4">
       <div className="md:w-2/5 mx-auto ">
         <div>
           <img src={picture} alt="" />
@@ -15,13 +15,11 @@ const CheckOut = () => {
             Id: <span>{id}</span>
           </p>
           <p className="font-bold">
-            For Premium Access You need to pay
-            <span className="bg-primary rounded p-3 ml-3 text-white ">
-              $ {price}
-            </span>
+            For Premium Access You need to pay :
+            <span className="text-primary "> $ {price}</span>
           </p>
         </div>
-        <div className="pt-32">
+        <div className="md:pt-32 pt-16">
           <Form></Form>
         </div>
       </div>
