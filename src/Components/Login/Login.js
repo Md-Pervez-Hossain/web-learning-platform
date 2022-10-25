@@ -1,15 +1,19 @@
 import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
   const [userEmail, setUserEmail] = useState("");
+
   const { userSignIn, LogInWithGoogle, logInWithGithub, resetemail } =
     useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
   const handleSignIn = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -19,7 +23,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         form.reset();
-        navigate("/home");
+        navigate(from, { replace: true });
         toast.success("Suer SuccesFully Log in", { autoClose: 500 });
         console.log(user);
       })
@@ -32,7 +36,7 @@ const Login = () => {
   const logInWithGoogle = () => {
     LogInWithGoogle()
       .then(() => {
-        navigate("/home");
+        navigate(from, { replace: true });
         toast.success("SuccessFully Log In With Google", { autoClose: 500 });
       })
       .catch((error) => {
@@ -42,7 +46,7 @@ const Login = () => {
   const logInWithGitHub = () => {
     logInWithGithub()
       .then(() => {
-        navigate("/home");
+        navigate(from, { replace: true });
         toast.success("SuccessFully Log in With GitHub", { autoClose: 500 });
       })
       .catch((error) => {

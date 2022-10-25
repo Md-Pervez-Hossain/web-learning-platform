@@ -8,6 +8,7 @@ import DetailsCourse from "./Components/Courses/DetailsCourse";
 import Home from "./Components/Home/Home";
 import Main from "./Components/Layout/Main";
 import Login from "./Components/Login/Login";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Register from "./Components/Register/Register";
 
 function App() {
@@ -51,7 +52,11 @@ function App() {
           path: "/checkout/:id",
           loader: ({ params }) =>
             fetch(`http://localhost:5000/checkout/${params.id}`),
-          element: <CheckOut></CheckOut>,
+          element: (
+            <PrivateRoute>
+              <CheckOut></CheckOut>
+            </PrivateRoute>
+          ),
         },
       ],
     },
