@@ -3,7 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const DetailsCourse = () => {
   const courses = useLoaderData();
-  const { picture, name, description, phone, email, price } = courses;
+  const { id, picture, name, description, phone, email, price } = courses;
   return (
     <div className="w-2/5 mx-auto bg-gray-100 p-5 shadow-2xl  my-16">
       <img src={picture} alt="" className="h-full" />
@@ -24,9 +24,11 @@ const DetailsCourse = () => {
             Back to Course
           </button>
         </Link>
-        <button className="bg-white shadow-xl px-3 py-2 my-2 font-bold ml-2">
-          Add To Cart
-        </button>
+        <Link to={`/checkout/${id}`}>
+          <button className="bg-white shadow-xl px-3 py-2 my-2 font-bold ml-2">
+            Get premium access
+          </button>
+        </Link>
       </div>
     </div>
   );

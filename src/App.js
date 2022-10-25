@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Blog from "./Components/Blog/Blog";
+import CheckOut from "./Components/CheckOut/CheckOut";
 import Courses from "./Components/Courses/Courses";
 import DetailsCourse from "./Components/Courses/DetailsCourse";
 
@@ -45,6 +46,12 @@ function App() {
         {
           path: "/register",
           element: <Register></Register>,
+        },
+        {
+          path: "/checkout/:id",
+          loader: ({ params }) =>
+            fetch(`http://localhost:5000/checkout/${params.id}`),
+          element: <CheckOut></CheckOut>,
         },
       ],
     },

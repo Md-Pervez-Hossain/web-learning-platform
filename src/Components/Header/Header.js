@@ -25,6 +25,7 @@ const Header = () => {
           <Link to="/home">Home</Link>
 
           <Link to="/blog">Blog</Link>
+          <Link to="/courses">Courses</Link>
           {user?.uid ? (
             <>
               <Link to="/courses">Course</Link>
