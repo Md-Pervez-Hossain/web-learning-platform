@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="bg-gray-100 h-screen pt-16">
-      <div className=" w-2/5 mx-auto p-16 space-y-3 rounded-xl shadow-2xl">
+    <div className="bg-gray-100 h-screen pt-16 p-4">
+      <div className=" md:w-2/5 mx-auto p-16 space-y-3 rounded-xl shadow-2xl">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form
           novalidate=""
