@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import ReactTopdf from "../../ReactToPdf/ReactTopdf";
+
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
@@ -9,7 +9,7 @@ const Main = () => {
     <div>
       <Header></Header>
       <Outlet></Outlet>
-      {/* <ReactTopdf></ReactTopdf> */}
+
       <Footer></Footer>
     </div>
   );

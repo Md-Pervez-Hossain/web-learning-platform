@@ -55,6 +55,7 @@ const Header = () => {
                 src={user.photoURL}
                 alt=""
                 width="50px"
+                title={user.displayName}
                 className=" rounded hover:bg-white hover:text-primary hover:ease-in duration-200 hover:rounded-lg p-2"
               />
             </>
