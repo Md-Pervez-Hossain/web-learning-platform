@@ -4,7 +4,7 @@ import Form from "../Form/Form";
 
 const CheckOut = () => {
   const course = useLoaderData();
-  const { id, picture, name, description, phone, email, price } = course;
+  const { id, picture, name, price } = course;
   return (
     <div className=" bg-gray-100  py-16 px-4">
       <div className="md:w-2/5 mx-auto ">

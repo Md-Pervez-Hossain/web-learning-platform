@@ -30,13 +30,18 @@ function App() {
         },
         {
           path: "/courses",
-          loader: () => fetch("http://localhost:5000/courses"),
+          loader: () =>
+            fetch(
+              " https://b610-learning-platform-server-side-md-pervez-hossain.vercel.app/courses"
+            ),
           element: <Courses></Courses>,
         },
         {
           path: "/courses/:id",
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/courses/${params.id}`),
+            fetch(
+              ` https://b610-learning-platform-server-side-md-pervez-hossain.vercel.app/courses/${params.id}`
+            ),
           element: (
             <PrivateRoute>
               <DetailsCourse></DetailsCourse>
@@ -62,7 +67,9 @@ function App() {
         {
           path: "/checkout/:id",
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/checkout/${params.id}`),
+            fetch(
+              ` https://b610-learning-platform-server-side-md-pervez-hossain.vercel.app/checkout/${params.id}`
+            ),
           element: (
             <PrivateRoute>
               <CheckOut></CheckOut>
