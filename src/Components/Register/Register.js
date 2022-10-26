@@ -1,12 +1,12 @@
 import React from "react";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Register = () => {
-  const { user, createUser, userDisplayNameAndPhotourl } =
-    useContext(AuthContext);
+  const { createUser, userDisplayNameAndPhotourl } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -37,6 +37,7 @@ const Register = () => {
         userDisplayNameAndPhotourl(username, photoURL)
           .then(() => {})
           .catch(() => {});
+        navigate("/");
         toast.success("User Succesfully Log In", { autoClose: 500 });
         form.reset();
         console.log(user);

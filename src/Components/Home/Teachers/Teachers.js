@@ -8,7 +8,7 @@ const Teachers = () => {
         <h2 className="md:text-7xl text-4xl font-bold text-primary pb-5  md:pb-10">
           Our Teacher
         </h2>
-        <p>
+        <p className="md:px-32 mb-5">
           Teaching is certainly the most commonly known career path for students
           earning a degree in education, and it's a great option if you like
           working with children or adults in a classroom setting. Teachers

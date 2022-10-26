@@ -18,13 +18,10 @@ const Header = () => {
   return (
     <div className=" bg-primary text-white py-4 shadow-xl  ">
       <div className=" w-9/12 mx-auto flex justify-between text-xl font-semibold ">
-        <Link
-          to="/"
-          className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
-        >
+        <Link to="/" className="p-2 font-bold">
           Web Tech
         </Link>
-        <div className="flex gap-10 menu menu-vertical lg:menu-horizontal">
+        <div className="flex gap-8 menu menu-vertical lg:menu-horizontal">
           <Link
             to="/courses"
             className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Teachers from "./Teachers/Teachers";
 
 const Home = () => {
@@ -13,19 +14,23 @@ const Home = () => {
           />
           <div>
             <h1 className="text-4xl md:text-7xl font-regular">
-              FUTURE OF <br /> Online
-              <span className="text-4xl md:text-7xl font-bold text-primary ml-2">
+              Future of <br />
+              Technology
+              <br />
+              <span className="text-4xl md:text-7xl font-bold text-primary ">
                 Education.
               </span>
             </h1>
             <p className="py-6">
               The most advanced education framework for Web. You get a website
-              with service workers which works both online and offline. <br />{" "}
-              The best part it comes with inbuilt installable app.
+              with service workers which works both online and offline. The best
+              part it comes with inbuilt installable app.
             </p>
-            <button className="btn btn-primary hover:bg-transparent hover:text-primary">
-              Get Started
-            </button>
+            <Link to="/courses">
+              <button className="btn btn-primary hover:bg-transparent hover:text-primary">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>
