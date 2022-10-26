@@ -4,6 +4,7 @@ import Blog from "./Components/Blog/Blog";
 import CheckOut from "./Components/CheckOut/CheckOut";
 import Courses from "./Components/Courses/Courses";
 import DetailsCourse from "./Components/Courses/DetailsCourse";
+import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Faq from "./Components/Faq/Faq";
 
 import Home from "./Components/Home/Home";
@@ -17,6 +18,7 @@ function App() {
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
           path: "/",
@@ -35,7 +37,11 @@ function App() {
           path: "/courses/:id",
           loader: ({ params }) =>
             fetch(`http://localhost:5000/courses/${params.id}`),
-          element: <DetailsCourse></DetailsCourse>,
+          element: (
+            <PrivateRoute>
+              <DetailsCourse></DetailsCourse>
+            </PrivateRoute>
+          ),
         },
         {
           path: "/blog",
