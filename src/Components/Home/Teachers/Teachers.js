@@ -16,8 +16,9 @@ const Teachers = () => {
         </p>
       </div>
       <div className="grid md:grid-cols-3 gap-10">
-        <div className="bg-gray-100 shadow-2xl rounded-md ">
+        <div className="bg-gray-100 shadow-2xl rounded-md  ">
           <img
+            className=""
             src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
             alt=""
           />
@@ -33,7 +34,7 @@ const Teachers = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-100 shadow-2xl rounded-md ">
+        <div className="bg-gray-100 shadow-2xl rounded-md  ">
           <img
             src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
             alt=""

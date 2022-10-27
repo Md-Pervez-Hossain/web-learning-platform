@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="bg-gray-100 mx-auto">
       <div className="  md:w-9/12 mx-auto pt-10 pb-10 md:pt-32 md:pb-16">
-        <div className="hero-content flex-col gap-10 lg:flex-row-reverse">
+        <div className="hero-content flex-col gap-10 lg:flex-row-reverse ">
           <img
             src="https://identyti.com/static/falcon/img/stock/page/kritikaraina/132413_jpg%20(1).jpg"
             className=" h-72 rounded-lg shadow-2xl"

@@ -4,7 +4,7 @@ import { FaMinus, FaPlus } from "react-icons/fa";
 
 const DisplayFAQ = ({ FAQ }) => {
   const [toggle, setToggle] = useState(false);
-  const { id, question, answer } = FAQ;
+  const { question, answer } = FAQ;
   return (
     <div className="md:w-9/12 mx-auto">
       <div

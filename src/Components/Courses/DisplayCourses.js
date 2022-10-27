@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const DisplayCourses = ({ course }) => {
   const { id, name, picture } = course;
   return (
-    <div className="bg-gray-100 shadow-xl">
-      <img src={picture} alt="" className="h-44" />
+    <div className="bg-gray-100 shadow-xl transform ">
+      <img src={picture} alt="" className="h-44 " />
       <div className="p-3">
         <h2 className="text-2xl font-bold ">{name}</h2>
         <Link to={`/courses/${id}`}>
