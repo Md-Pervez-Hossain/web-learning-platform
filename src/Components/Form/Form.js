@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+// this is checkout page form
 const Form = () => {
   return (
     <div>

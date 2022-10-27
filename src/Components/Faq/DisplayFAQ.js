@@ -2,7 +2,9 @@ import React from "react";
 import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
+// this is freequently asked page
 const DisplayFAQ = ({ FAQ }) => {
+  // this state for toogle the content
   const [toggle, setToggle] = useState(false);
   const { question, answer } = FAQ;
   return (

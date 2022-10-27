@@ -2,10 +2,10 @@ import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import DisplayCourses from "./DisplayCourses";
 
+// this is course here is two parts one is category and other side is category info
 const Courses = () => {
   const courses = useLoaderData();
   console.log(courses);
-
   return (
     <div className="md:w-9/12 mx-auto grid md:grid-cols-3 gap-5 my-16 p-4 ">
       <div className="md:col-span-1">

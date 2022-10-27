@@ -2,6 +2,7 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Form from "../Form/Form";
 
+// this is check out page and its private route , here i show the data dynamically which user picked
 const CheckOut = () => {
   const course = useLoaderData();
   const { id, picture, name, price } = course;
@@ -29,6 +30,7 @@ const CheckOut = () => {
         </div>
         <div className=" pt-10">
           <h2 className="text-2xl font-bold my-4 ">Fill this out for order</h2>
+
           <Form></Form>
         </div>
       </div>

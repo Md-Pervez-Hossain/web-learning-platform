@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// here i display all course at a time
 const DisplayCourses = ({ course }) => {
   const { id, name, picture } = course;
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+//this is error page when the user don't search the right url on that time this page show and it has a button link to get back the home page
 const ErrorPage = () => {
   return (
     <div>

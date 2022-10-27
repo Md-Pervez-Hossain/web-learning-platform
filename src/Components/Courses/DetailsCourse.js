@@ -3,7 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Pdf from "react-to-pdf";
 
 const ref = React.createRef();
-
+// this is each course dymanic route, this page contains all the info about that course which courses the user clicked and also here is a button for access the premuim content
 const DetailsCourse = () => {
   const courses = useLoaderData();
   const { id, picture, name, description, phone, email, price } = courses;
