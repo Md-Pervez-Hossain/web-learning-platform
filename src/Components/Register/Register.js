@@ -27,7 +27,7 @@ const Register = () => {
       toast.warning("Email is required");
       return;
     }
-    if (password === "") {
+    if (password === "" && password.length < 6) {
       toast.warning("password is required");
       return;
     }

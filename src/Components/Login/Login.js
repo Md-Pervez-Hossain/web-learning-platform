@@ -19,6 +19,13 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    if (email === "") {
+      toast.warning("Email is Required", { autoClose: 500 });
+      return;
+    }
+    if (password === "") {
+      toast.warning("Password  is Required", { autoClose: 500 });
+    }
     userSignIn(email, password)
       .then((result) => {
         const user = result.user;
