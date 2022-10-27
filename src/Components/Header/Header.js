@@ -33,25 +33,25 @@ const Header = () => {
         <div className="flex gap-8 menu menu-vertical lg:menu-horizontal ">
           <Link
             to="/home"
-            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-3"
           >
             Home
           </Link>
           <Link
             to="/courses"
-            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-3"
           >
             Courses
           </Link>
           <Link
             to="/blog"
-            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-3"
           >
             Blog
           </Link>
           <Link
             to="/faq"
-            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+            className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-3"
           >
             Faq
           </Link>
@@ -68,7 +68,7 @@ const Header = () => {
               <Link
                 to="/home"
                 onClick={handleLogout}
-                className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+                className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-3"
               >
                 Logout
               </Link>
@@ -78,20 +78,20 @@ const Header = () => {
                 alt=""
                 width="50px"
                 title={user.displayName}
-                className=" rounded hover:bg-white hover:text-primary hover:ease-in duration-200 hover:rounded-lg p-2"
+                className=" rounded hover:bg-white hover:text-primary hover:ease-in duration-200 hover:rounded-lg p-3"
               />
             </>
           ) : (
             <>
               <Link
                 to="/login"
-                className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+                className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-3"
               >
                 Login
               </Link>
               <Link
                 to="register"
-                className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-2"
+                className=" hover:bg-white hover:text-primary hover:ease-in duration-200 rounded-lg p-3"
               >
                 Register
               </Link>
