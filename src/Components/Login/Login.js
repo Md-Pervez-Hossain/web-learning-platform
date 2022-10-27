@@ -8,7 +8,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 const Login = () => {
   const [userEmail, setUserEmail] = useState("");
 
-  const { userSignIn, LogInWithGoogle, logInWithGithub, resetemail } =
+  const { userSignIn, LogInWithGoogle, logInWithGithub, resetpassword } =
     useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -66,7 +66,7 @@ const Login = () => {
   };
 
   const handlePasswordReset = () => {
-    resetemail(userEmail)
+    resetpassword(userEmail)
       .then(() => {
         toast.success("check your Email For Recovery Password", {
           autoClose: 500,
