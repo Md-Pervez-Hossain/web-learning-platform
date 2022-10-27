@@ -8,13 +8,26 @@ const DetailsCourse = () => {
   const courses = useLoaderData();
   const { id, picture, name, description, phone, email, price } = courses;
   return (
-    <div className="  p-4 py-16">
-      <div className="md:w-2/5 mx-auto bg-gray-100  shadow-2xl p-5">
+    <div className="  bg-gray-100  p-4 py-16">
+      <div className="md:w-2/5 mx-auto  shadow-2xl p-5">
+        <Pdf targetRef={ref} filename="code-example.pdf">
+          {({ toPdf }) => (
+            <button
+              onClick={toPdf}
+              className=" bg-primary hover:bg-transparent hover:text-primary hover:ease-in duration-200 text-white  shadow-xl px-3 py-2 my-2 font-bold "
+            >
+              Download Pdf
+            </button>
+          )}
+        </Pdf>
         <div ref={ref}>
-          <img src={picture} alt="" className="h-full" />
+          <h2 className="text-4xl font-bold my-3 ">{name}</h2>
+          <img src={picture} alt="" className="h-full py-3" />
           <div>
-            <h2 className="text-4xl font-bold my-3 ">{name}</h2>
-            <p>{description}</p>
+            <p className="font-semibold">
+              Details About Course :{" "}
+              <span className="font-light">{description}</span>
+            </p>
             <p className="font-semibold">
               Price : <span className="font-light">$ {price}</span>
             </p>
@@ -26,18 +39,9 @@ const DetailsCourse = () => {
             </p>
           </div>
         </div>
-        <Pdf targetRef={ref} filename="code-example.pdf">
-          {({ toPdf }) => (
-            <button
-              onClick={toPdf}
-              className=" bg-primary hover:bg-transparent hover:text-primary hover:ease-in duration-200 text-white  shadow-xl px-3 py-2 my-2 font-bold "
-            >
-              Generate Pdf
-            </button>
-          )}
-        </Pdf>
+
         <Link to="/courses">
-          <button className=" bg-primary hover:bg-transparent hover:text-primary hover:ease-in duration-200 text-white  shadow-xl px-3 py-2 my-2 font-bold md:ml-3">
+          <button className=" bg-primary hover:bg-transparent hover:text-primary hover:ease-in duration-200 text-white  shadow-xl px-3 py-2 my-2 font-bold ">
             Back to Course
           </button>
         </Link>
